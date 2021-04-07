@@ -13,4 +13,6 @@ console.log(String(false));
 console.log(Boolean(57));
 
 console.log(Object(1));
-
+ 
+let binary = "17";
+console.log(parseInt(binary, 2));
