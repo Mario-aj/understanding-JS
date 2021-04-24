@@ -14,11 +14,9 @@ console.log(person.name);
 delete person.name;
 console.log(person.name);
 
-
 console.log(person);
 delete person;
 console.log(person);
-
 
 let people = ['Mario', 'Foguinho', 'Fernando', 'Isabel', 'Jorgito'];
 
@@ -27,4 +25,4 @@ delete people[0];
 console.log(people.length);
 console.log(people[0]);
 
-console.log('Foguinho' in people);
+console.log(1 in people);
