@@ -26,3 +26,5 @@ console.log(people.length);
 delete people[0];
 console.log(people.length);
 console.log(people[0]);
+
+console.log('Foguinho' in people);
