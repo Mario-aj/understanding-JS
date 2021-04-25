@@ -9,15 +9,18 @@
 let prevTerm = 1;
 let nextTerm = 2;
 let result = 0;
-let counter = 0;
+let counter = nextTerm;
 
-while ( counter <= 4000000) {
-  counter = prevTerm + nextTerm;
+console.log(prevTerm);
+
+while ( counter < 4000000) {
 
   if(counter % 2 === 0) result += counter;
-  
+
+  counter = prevTerm + nextTerm;
   prevTerm = nextTerm;
   nextTerm = counter;
+
 };
 
 console.log('result: ', result);
