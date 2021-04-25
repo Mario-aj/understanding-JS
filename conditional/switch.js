@@ -1,4 +1,4 @@
-let tipofruta = 'Maçã';
+let tipofruta = 'Mamão';
 
 switch (tipofruta) {
   case "Laranja":
