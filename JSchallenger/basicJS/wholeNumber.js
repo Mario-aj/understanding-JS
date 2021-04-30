@@ -8,8 +8,6 @@ function isWholeNumber(number) {
   return Number.isInteger(number);
 };
 
-
 console.log(isWholeNumber(10));
 console.log(isWholeNumber(10.6));
-
 
