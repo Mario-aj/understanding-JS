@@ -10,4 +10,3 @@ function isWholeNumber(number) {
 
 console.log(isWholeNumber(10));
 console.log(isWholeNumber(10.6));
-
