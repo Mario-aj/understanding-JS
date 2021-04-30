@@ -17,10 +17,17 @@ function concatStrings(string, valueToConcat) {
 }
 
 //function2
-function concatByAnotherMethods(str, value) {
+function concatBySecondMethod(str, value) {
   return str.indexOf(value) >= 0
     ? `${value}${str}`
     : `${str}${value}`;
+}
+
+//function3
+function concatByThirdMethod(str, value) {
+  return str.indexOf(value) >= 0
+    ? value + str
+    : str + value;
 }
 
 console.log(concatStrings("cheese", "cake"));
@@ -28,8 +35,12 @@ console.log(concatStrings('lips', 's'));
 console.log(concatStrings("Java", "script"));
 console.log(concatStrings(" think, therefore I am","I"));
 
-console.log(concatByAnotherMethods("cheese", "cake"));
-console.log(concatByAnotherMethods('lips', 's'));
-console.log(concatByAnotherMethods("Java", "script"));
-console.log(concatByAnotherMethods(" think, therefore I am","I"));
+console.log(concatBySecondMethod("cheese", "cake"));
+console.log(concatBySecondMethod('lips', 's'));
+console.log(concatBySecondMethod("Java", "script"));
+console.log(concatBySecondMethod(" think, therefore I am","I"));
 
+console.log(concatByThirdMethod("cheese", "cake"));
+console.log(concatByThirdMethod('lips', 's'));
+console.log(concatByThirdMethod("Java", "script"));
+console.log(concatByThirdMethod(" think, therefore I am","I"));
