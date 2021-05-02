@@ -16,8 +16,13 @@ function clearUpTheChoasInStrings(leftSide, rightSide) {
 };
 
 
+function capitalize(str) {
+  if (typeof str !== 'string') return;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
 // console.log(clearUpTheChoasInStrings('java', 'tpi%rcs'));
 
-let str = 'java';
 
-console.log(str);
+console.log(capitalize('mario'));
