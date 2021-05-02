@@ -6,6 +6,12 @@
  */
 
 function clearUpTheChoasInStrings(leftSide, rightSide) {
+  function capitalize(str) {
+    if (typeof str !== 'string') return;
+  
+    return str[0].toUpperCase() + str.slice(1);
+  }
+
   rightSide = rightSide.replace('%', '').split('');
   leftSide = capitalize(leftSide.replace('%', ''));
   let tmpRightSide = ''
@@ -14,12 +20,5 @@ function clearUpTheChoasInStrings(leftSide, rightSide) {
 
   return (leftSide + tmpRightSide).replace('%', '');
 };
-
-
-function capitalize(str) {
-  if (typeof str !== 'string') return;
-
-  return str[0].toUpperCase() + str.slice(1);
-}
 
 console.log(clearUpTheChoasInStrings('java', 'tpi%rcs'));
