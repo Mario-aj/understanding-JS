@@ -16,7 +16,8 @@ function unencrypted(encryptedWord) {
 
   for (let char of encryptedWord) {
     let index = alphabet.indexOf(char);
-    unencryptedWord += alphabet[index + 1]; 
+    if(index >= 0)
+      unencryptedWord += alphabet[index + 1]; 
   };
 
   return unencryptedWord;
