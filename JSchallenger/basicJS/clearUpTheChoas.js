@@ -7,11 +7,17 @@
 
 function clearUpTheChoasInStrings(leftSide, rightSide) {
 
-  leftSide.replace('%', '');
-  rightSide.replace('%', '');
+  rightSide = rightSide.replace('%', '');
+  leftSide = leftSide.replace('%', '');
 
-  return leftSide + rightSide;
+  
+  let correctWord = leftSide + rightSide;
+  return correctWord.replace('%', '');
 };
 
 
-console.log(clearUpTheChoasInStrings('java', 'tpi%rcs'));
+// console.log(clearUpTheChoasInStrings('java', 'tpi%rcs'));
+
+let str = 'java';
+
+console.log(str);
