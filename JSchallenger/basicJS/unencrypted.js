@@ -23,3 +23,5 @@ function unencrypted(encryptedWord) {
 }
 
 console.log(unencrypted('bnchmf'));
+console.log(unencrypted('bgddrd'));
+console.log(unencrypted('sdrshmf'));
