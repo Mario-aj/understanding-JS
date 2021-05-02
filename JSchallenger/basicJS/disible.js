@@ -6,12 +6,9 @@
  */
 
 function divisible(x, y) {
-  if (x % y === 0) return x;
-  else {
-    while(x % y !== 0) x++; 
+  while(x % y !== 0) x++; 
 
-    return x;
-  }
+  return x;
 };
 
 console.log(divisible(1, 23));
