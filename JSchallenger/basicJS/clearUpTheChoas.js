@@ -6,13 +6,13 @@
  */
 
 function clearUpTheChoasInStrings(leftSide, rightSide) {
+  rightSide = rightSide.replace('%', '').split('');
+  leftSide = capitalize(leftSide.replace('%', ''));
+  let tmpRightSide = ''
 
-  rightSide = rightSide.replace('%', '');
-  leftSide = leftSide.replace('%', '');
+  for(let i = (rightSide.length - 1); i>= 0; i--) tmpRightSide += rightSide[i];
 
-  
-  let correctWord = leftSide + rightSide;
-  return correctWord.replace('%', '');
+  return (leftSide + tmpRightSide).replace('%', '');
 };
 
 
@@ -22,7 +22,4 @@ function capitalize(str) {
   return str[0].toUpperCase() + str.slice(1);
 }
 
-// console.log(clearUpTheChoasInStrings('java', 'tpi%rcs'));
-
-
-console.log(capitalize('mario'));
+console.log(clearUpTheChoasInStrings('java', 'tpi%rcs'));
