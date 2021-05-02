@@ -8,10 +8,9 @@
 function divisible(x, y) {
   if (x % y === 0) return x;
   else {
-    let xx = x; 
-    while(xx % y !== 0) xx++; 
+    while(x % y !== 0) x++; 
 
-    return xx;
+    return x;
   }
 };
 
