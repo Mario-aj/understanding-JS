@@ -4,9 +4,11 @@
  */
 
 function timesCharacterOccur(char, string) {
+  let charFinded = 0;
+  for (let elem of string)
+    if (elem === char)  charFinded++;
 
-
-  return true;
+  return charFinded;
 };
 
 
