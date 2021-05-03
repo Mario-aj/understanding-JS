@@ -1,7 +1,6 @@
 
 
 function percentageOfNumbers(prop) {
-
   return prop.number * (prop.percentage / 100);
 }
 
