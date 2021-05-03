@@ -4,8 +4,13 @@
  */
 
 function percentageOfNumbers(prop) {
-  return prop.number * (prop.percentage / 100);
-}
+  let percentage = prop.number * (prop.percentage / 100);
+  const [, fractional] = String(percentage).split('.');
+
+  if(!fractional) return percentage;
+
+  return Number(percentage.toFixed(2));
+};
 
 console.log(percentageOfNumbers({number: 100, percentage: 50}));
 console.log(percentageOfNumbers({number: 777, percentage: 2}));
