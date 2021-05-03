@@ -5,7 +5,7 @@
  * If not, return the next higher prime number
  */
 
-function findNextHigherPrimeNumber(number) {
+ function findNextHigherPrimeNumber(number) {
   let isDivisible = 0;
   number++;
   for (let i = 0; i <= number; i++)
