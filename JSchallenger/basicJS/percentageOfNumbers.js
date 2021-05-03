@@ -3,7 +3,7 @@
  * Return the given percentage of the number 
  */
 
-Number.prototype.isFloat = (number) => {
+const isFloat = (number) => {
   const [, fractional] = String(number).split('.');
 
   return !!fractional;
@@ -11,10 +11,8 @@ Number.prototype.isFloat = (number) => {
 
 function percentageOfNumbers(prop) {
   let percentage = prop.number * (prop.percentage / 100);
-  
-  return percentage.isFloat()
-    ? Number(percentage.toFixed(2))
-    : percentage;
+
+  return isFloat(percentage) ? Number(percentage.toFixed(2)) : percentage;
 };
 
 console.log(percentageOfNumbers({number: 100, percentage: 50}));
