@@ -1,4 +1,7 @@
-
+/**
+ * Write a function that takes an object with the properties number and percentage as argument
+ * Return the given percentage of the number 
+ */
 
 function percentageOfNumbers(prop) {
   return prop.number * (prop.percentage / 100);
