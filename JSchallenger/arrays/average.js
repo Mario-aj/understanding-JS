@@ -5,12 +5,9 @@
 
 function average(array) {
   let lenght = array.length;
-  array = array.reduce((acumulator, value) => acumulator + (value / lenght), 0).toString().split('.')[0];
-  return Number(array);
+  array = array.reduce((acumulator, value) => acumulator + value, 0);
+  return array / lenght;
 };
-
-let arr = [10,100,40];
-
 
 console.log(average([10,100,40]));
 console.log(average([10,100,1000]));
