@@ -7,7 +7,7 @@
 
 function returnLastNArrayElements(array, n) {
 
-  return array.slice(array[array.length - n - 1], array.length);
+  return array.slice(array[array.length - n - 1]);
 }
 
 console.log(returnLastNArrayElements([1, 2, 3, 4, 5], 2));
