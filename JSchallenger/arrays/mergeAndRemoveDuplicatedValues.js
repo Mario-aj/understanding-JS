@@ -9,16 +9,17 @@ function some(array) {
   for (let i = 0; i < array.length - 1; i++) {
     for (let j = i + 1; j < array.length; j++) 
       if (array[i] === array[j]);
-        return true;
+      array.splice(i, 1);
   };
-  return false;
+  return array;
 };
 
 function mergeAndRemoveDuplicatedValues(...arrays) {
   let concatedArrays = [];
   concatedArrays = concatedArrays.concat(...arrays);
 
-  return some(concatedArrays);
+  return some(concatedArrays).sort((a, b) => a - b);
 };
 
-console.log(mergeAndRemoveDuplicatedValues([1, 2, 3], [3, 5, 5, 6]));
+console.log(mergeAndRemoveDuplicatedValues([1, 2, 3], [3, 4, 5, , 6]));
+console.log(mergeAndRemoveDuplicatedValues([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
