@@ -5,12 +5,10 @@
 
 
 function removeElements(array, value) {
-  let resultArray = [];
-  let counter = 0;
-  while (counter < array.length) 
-    array[counter] !== value ? resultArray.push(array[counter++]) : counter++;
-
-  return resultArray;
+  return array.filter(elem => elem !== value);
 };
 
 console.log(removeElements([1,2,3], 2));
+console.log(removeElements([1,2,'2'], '2'));
+console.log(removeElements([false,'2',1], false));
+console.log(removeElements([1,2,'2',1], 1));
