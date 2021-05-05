@@ -10,4 +10,6 @@ function mergeArray(...arrays) {
 
 
 console.log(mergeArray([1, 2, 3], [4, 5, 6]));
+console.log(mergeArray(['a', 'b', 'c'], [4, 5, 6]));
+console.log(mergeArray([true, true], [1, 2], ['a', 'b']));
 
