@@ -9,11 +9,11 @@ let anonymousFactorial = function(number) {
   return number === 0 ? 1 : number * anonymousFactorial(number - 1);
 };
 
-console.log(anonymousFactorial(3));
+console.log(anonymousFactorial(5));
 
 // arrow function
 let arrowFunctionFactorial = (number) => {
   return number === 0 ? 1 : number * anonymousFactorial(number - 1);
 };
 
-console.log(arrowFunctionFactorial(4));
+console.log(arrowFunctionFactorial(5));
