@@ -7,7 +7,7 @@
  */
  
 function square(number) {
-  return number ** 2;
+  return number * number;
 };
 
 console.log(square(4));
