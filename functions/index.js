@@ -19,3 +19,10 @@ let squareAnonymous = function (number) {
 };
 
 console.log(squareAnonymous(4));
+
+// arrow functions
+let squareAnonymous = (number) => {
+  return number ** 2;
+};
+
+console.log(squareAnonymous(4));
