@@ -22,8 +22,8 @@ let push = (array, element, position) => {
   return result;
 };
 
-let array = [1, 4, 6, 2];
-console.log(array);
-console.log(push(array, 7, 2));
-console.log(push(array, 8, 3));
-console.log(push(array, 900));
+let arr = [1, 4, 6, 2];
+console.log(arr);
+console.log(push(arr, 7, 2));
+console.log(push(arr, 8, 3));
+console.log(push(arr, 900));
