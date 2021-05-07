@@ -1,14 +1,13 @@
 let push = (array, element, position) => {
   let result = [];
 
-  if (!position){ 
+  if (!position && position !== 0){ 
     array.push(element);
     return array;
-  }
+  };
 
-  if (array.length <= position) {
+  if (position >= array.length) {
     array[array.length] = element;
-
     return array;
   };
 
@@ -27,3 +26,4 @@ console.log(arr);
 console.log(push(arr, 7, 2));
 console.log(push(arr, 8, 3));
 console.log(push(arr, 900));
+console.log(push(arr, 900, 0));
