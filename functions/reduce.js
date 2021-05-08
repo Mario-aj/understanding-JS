@@ -1,8 +1,5 @@
 let reduce = (func, array, initialValue) => {
-  array.forEach((element) => {console.log(element)
-
-    initialValue = func(initialValue, element)
-  });
+  array.forEach((element) =>  initialValue = func(initialValue, element));
   return initialValue;
 };
 
