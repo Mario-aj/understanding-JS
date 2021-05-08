@@ -7,3 +7,6 @@ let reduce = (func, array, initialValue) => {
 
 let arr = [1, 2, 3, 4, 5];
 console.log(reduce((acumulator, element) => acumulator + element, arr, 0));
+
+let names = ['mario', 'alfredo', 'jorge'];
+console.log(reduce((acumulator, element) => acumulator + ' ' + element, names, ''));
