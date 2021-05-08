@@ -11,5 +11,5 @@ let arr = [5, 6, 7, 8, 9];
 console.log(every(value => value >= 6, arr));
 console.log(arr.every(value => value >= 6));
 //true
-console.log(every(value => value >= 6, arr));
-console.log(arr.every(value => value >= 6));
+console.log(every(value => value >= 2, arr));
+console.log(arr.every(value => value >= 2));
