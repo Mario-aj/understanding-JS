@@ -1,7 +1,8 @@
 let reduce = (func, array, initialValue) => {
-  array.forEach((element) =>
-    initialValue = func(initialValue, element));
+  array.forEach((element) => {console.log(element)
 
+    initialValue = func(initialValue, element)
+  });
   return initialValue;
 };
 
@@ -17,4 +18,4 @@ let person = [
   { name: 'Elineth', dev: false },
   { name: 'Isabel', dev: false },
 ];
-console.log(reduce((acumulator, element) => acumulator + ' ' + element.name, names, ''));
+console.log(reduce((acumulator, element) => acumulator + ' ' + element.name, person, ''));
