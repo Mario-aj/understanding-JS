@@ -9,4 +9,5 @@ let acessingObjectProperties = (obj) => {
   return obj['prop-2'];
 }
 
-console.log(acessingObjectProperties({  one: 1,  'prop-2': 2}));
+console.log(acessingObjectProperties({one: 1,  'prop-2': 2}));
+console.log(acessingObjectProperties({'prop-2': 'two',  prop: 'test'}));
