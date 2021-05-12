@@ -8,3 +8,4 @@ let acessingObjectPropertyOne = (obj) => {
 };
 
 console.log(acessingObjectPropertyOne({continent: 'Asia',  country: 'Japan'}));
+console.log(acessingObjectPropertyOne({country: 'Sweden',  continent: 'Europe'}));
