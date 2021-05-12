@@ -3,24 +3,28 @@
  * What is the largest prime factor of the number 600851475143 ?
  */
 
-let number = 600851475143;
-let counter = 2
-let divResult;
-let largestPrimeFactor = 0;
+let largest = (number) => {
+  let counter = 2
+  let divResult;
+  let largestPrimeFactor = 0;
 
-while (counter <= number) {
-  divResult = number / counter;
+  while (counter <= number) {
+    divResult = (number / counter);
 
-  let restCounter = 0;
-  for (i = 0; i <= divResult; i++) {
-    if(divResult % i === 0) restCounter++;
-  }
+    let restCounter = 0;
+    for (i = 0; i <= divResult; i++) {
+      if(divResult % i === 0) restCounter++;
+    }
 
-  if (restCounter === 2)
-    if (divResult >= largestPrimeFactor)
-      largestPrimeFactor = divResult;
+    if (restCounter === 2)
+      if (divResult >= largestPrimeFactor)
+        largestPrimeFactor = divResult;
 
-  counter++;
-};
+    counter++;
+  };
 
-console.log(largestPrimeFactor);
+  return largestPrimeFactor;
+}
+
+let number = 13195;
+console.log(largest(number));
