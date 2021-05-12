@@ -9,3 +9,4 @@ let accessing = (obj, str) => {
 };
 
 console.log(accessing({  continent: 'Asia',  country: 'Japan'}, 'continent'));
+console.log(accessing({  country: 'Sweden',  continent: 'Europe'}, 'country'));
