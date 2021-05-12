@@ -24,7 +24,15 @@ let largest = (number) => {
   };
 
   return largestPrimeFactor;
-}
+};
 
-let number = 13195;
-console.log(largest(number));
+let newLargestFunction = (number) => {
+
+  largestPrimeFactor = number;
+  
+  return largestPrimeFactor;
+};
+
+let number = 600851475143;
+// console.log(largest(number));
+console.log(newLargestFunction(number));
