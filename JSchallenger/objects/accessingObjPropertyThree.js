@@ -4,8 +4,7 @@
  */
 
 let accessing = (obj, str) => {
-  let result = Object.keys(obj).find(value => value === str)
-  return obj[result]
+  return obj[str]
 };
 
 console.log(accessing({  continent: 'Asia',  country: 'Japan'}, 'continent'));
