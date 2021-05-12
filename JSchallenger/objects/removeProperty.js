@@ -9,4 +9,19 @@ let removePropertyFromObject = (obj) => {
 };
 
 
-console.log(removePropertyFromObject({ continent: 'Asia', country: 'Japan', region: 'Kansai' }));
+console.log(removePropertyFromObject(
+  { continent: 'Asia', country: 'Japan', region: 'Kansai' }
+));
+
+console.log(removePropertyFromObject(
+  { country: 'Sweden', continent: 'Europe', planet: 'Earth' }
+));
+
+console.log(removePropertyFromObject(
+  { 
+    city: 'Sacramento', 
+    state: 'California',
+    country: 'USA',
+    continent: 'North America'
+  }
+));
