@@ -11,3 +11,5 @@ let swapKey = (obj) => {
     result[obj[key]] = key;
   return  result;
 };
+
+console.log(swapKey());
