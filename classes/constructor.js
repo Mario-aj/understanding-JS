@@ -5,5 +5,4 @@ class Person {
 };
 
 let person = new Person('Mario');
-
 console.log(person._name);
