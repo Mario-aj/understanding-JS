@@ -19,6 +19,14 @@ class Family {
   set mother (str) {
     this._mother = str
   };
+
+  set son (str) {
+    this._son = str;
+  };
+
+  get son () {
+    return this._son;
+  }
 };
 
 let family = new Family('Paulo', 'Admira');
@@ -31,3 +39,6 @@ family.mother = 'Elineth';
 
 console.log(family.father);
 console.log(family.mother);
+
+family.son = ('Fernando');
+console.log(family.son);
