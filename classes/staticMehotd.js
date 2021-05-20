@@ -16,10 +16,16 @@ class Square {
   static duplicatedArea(obj) {
     console.log('the duplicated area is: ', obj.height * obj.width * 2);
   }
+
+  newDuplicatedArea(square) {
+    console.log(Square.duplicatedArea(square));
+  };
 };
 
 const square = new Square(12, 4);
 
 square.area();
+square.newDuplicatedArea(square);
 //square.sayMyName(); // Error
 Square.sayMyName(square);
+Square.duplicatedArea(square);
