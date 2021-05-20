@@ -5,8 +5,10 @@ class myError {
   };
 };
 
-myError.prototype.Throw = function() {
-  console.log(this.name, ": ", this.message);
-};
+myError.prototype.toString = function() {
+  return this.name + ': "' + this.message + '"';
+}
 
+myError.toString();
 throw new myError('Valor muito alto!');
+
