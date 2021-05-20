@@ -15,10 +15,10 @@ class Modal extends Car {
   };
 
   show() {
-    console.log(this.present() + " it's a ", + this.modal);
+    console.log(this.present() + " it's a Sonata", + this.modal);
   };
 };
 
-const car = new Modal('Elantra', 'Sonata 2021');
+const car = new Modal('Elantra', 2021);
 
 car.show();
