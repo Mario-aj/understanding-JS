@@ -12,6 +12,10 @@ class Square {
   static sayMyName(square) {
     console.log(square.name);
   }
+
+  static duplicatedArea(obj) {
+    console.log('the duplicated area is: ', obj.height * obj.width * 2);
+  }
 };
 
 const square = new Square(12, 4);
