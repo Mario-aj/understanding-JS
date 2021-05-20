@@ -1,6 +1,6 @@
 class Square {
   constructor (height, width) {
-    this.name = 'Square';
+    this.name = 'Square create by Mario from Angola';
     this.height = height;
     this.width = width;
   };
@@ -8,8 +8,14 @@ class Square {
   area() {
     console.log('the area of ', this.name, ' is ', this.height * this.width);
   };
+
+  static sayMyName() {
+    console.log(this.name);
+  }
 };
 
 const square = new Square(12, 4);
 
 square.area();
+//square.sayMyName(); // Error
+Square.sayMyName();
