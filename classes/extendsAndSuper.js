@@ -20,5 +20,4 @@ class Modal extends Car {
 };
 
 const car = new Modal('Elantra', 2021);
-
 car.show();
