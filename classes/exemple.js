@@ -27,3 +27,5 @@ let teacher = new Teacher('Elineth', 'Tavares', 25, 'Female', 'Law', 'Mekaup');
 
 person.greeting();
 teacher.greeting();
+
+console.log(teacher.subject);
