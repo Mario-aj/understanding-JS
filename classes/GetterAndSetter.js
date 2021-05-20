@@ -40,5 +40,5 @@ family.mother = 'Elineth';
 console.log(family.father);
 console.log(family.mother);
 
-family.generateSon = ('Fernando');
+family.generateSon = 'Fernando';
 console.log(family.son);
