@@ -20,7 +20,7 @@ class Family {
     this._mother = str
   };
 
-  set son (str) {
+  set generateSon (str) {
     this._son = str;
   };
 
@@ -40,5 +40,5 @@ family.mother = 'Elineth';
 console.log(family.father);
 console.log(family.mother);
 
-family.son = ('Fernando');
+family.generateSon = ('Fernando');
 console.log(family.son);
