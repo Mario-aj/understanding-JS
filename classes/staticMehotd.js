@@ -9,8 +9,8 @@ class Square {
     console.log('the area of ', this.name, ' is ', this.height * this.width);
   };
 
-  static sayMyName() {
-    console.log(this.name);
+  static sayMyName(square) {
+    console.log(square.name);
   }
 };
 
@@ -18,4 +18,4 @@ const square = new Square(12, 4);
 
 square.area();
 //square.sayMyName(); // Error
-Square.sayMyName();
+Square.sayMyName(square);
