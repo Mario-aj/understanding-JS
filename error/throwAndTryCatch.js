@@ -9,6 +9,5 @@ myError.prototype.toString = function() {
   return this.name + ': "' + this.message + '"';
 }
 
-myError.toString();
 throw new myError('Valor muito alto!');
 
