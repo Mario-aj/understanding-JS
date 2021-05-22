@@ -21,4 +21,6 @@ try {
   console.log(month.getMonthName());
 } catch(e) {
   console.log('meu erro: ', e);
-};
+}finally {
+  console.log('finally')
+}
