@@ -22,4 +22,3 @@ try {
 } catch(e) {
   console.log('meu erro: ', e);
 };
-
