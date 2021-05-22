@@ -10,4 +10,3 @@ myError.prototype.toString = function() {
 }
 
 throw new myError('Valor muito alto!');
-
