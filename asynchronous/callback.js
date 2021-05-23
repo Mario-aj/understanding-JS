@@ -1,5 +1,5 @@
 function callback(person) {
-  console.log('good morning mister', person);
+  console.log('good morning Mr. ', person);
 };
 
 function greatingPeople(callback) {
