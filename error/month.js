@@ -22,5 +22,5 @@ try {
 } catch(e) {
   console.log('meu erro: ', e);
 }finally {
-  console.log('finally')
+  console.log('finally');
 }
