@@ -8,3 +8,13 @@ function greatingPeople(callback) {
 };
 
 greatingPeople(callback);
+
+// another form to write callbacks
+let anotherGreeting  = () => {
+  let person = 'Mario Jorge';
+  callback(person);
+}; 
+
+anotherGreeting((person) => {
+  console.log('good morning Mr. ', person);
+});
