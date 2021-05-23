@@ -7,4 +7,4 @@ function greatingPeople(callback) {
   callback(person);
 };
 
-greatingPeople();
+greatingPeople(callback);
