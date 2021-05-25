@@ -11,8 +11,6 @@ let nextTerm = 2;
 let result = 0;
 let counter = nextTerm;
 
-console.log(prevTerm);
-
 while ( counter < 4000000) {
 
   if(counter % 2 === 0) result += counter;
