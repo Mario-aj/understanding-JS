@@ -19,4 +19,4 @@ let largestPrimeFactor = (number) => {
 };
 
 let number = 600851475143;
-console.log(largest(number));
+console.log(largestPrimeFactor(number));
