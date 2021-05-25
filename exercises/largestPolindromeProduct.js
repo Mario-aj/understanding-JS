@@ -21,7 +21,7 @@ let findTheLargestPolindrome = () => {
   let largestPolindromeProduct = 0;
 
   for (let i = 100; i <= 999; i ++){
-    for (let j = i + 100; j <= 999; j++) {
+    for (let j = i + 1; j <= 999; j++) {
       let product = i * j;
       if(isPolindrome(product) && product > largestPolindromeProduct)
         largestPolindromeProduct = product;
