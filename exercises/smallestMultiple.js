@@ -6,10 +6,23 @@
  *the numbers from 1 to 20?
  */
 
+const otherFunction = (prop) => {
+  let number = prop;
+  let array = [];
+
+  for (let i = 1; i <= number; i++) array.push(i);
+
+  while (true) {
+    if (array.every((elem) => number % elem === 0)) return number;
+
+    number++;
+  }
+};
+
 const smallestMultiple = () => {
-  number = 10;
-  limit = number;
-  results = [];
+  let number = 10;
+  let limit = number;
+  let results = [];
 
   while (true) {
     for (let i = 1; i <= limit; i++) {
@@ -26,4 +39,5 @@ const smallestMultiple = () => {
   }
 };
 
-console.log(smallestMultiple());
+// console.log("first: ", smallestMultiple());
+console.log("second: ", otherFunction());
