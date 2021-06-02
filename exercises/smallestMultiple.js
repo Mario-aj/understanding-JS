@@ -38,5 +38,5 @@ const smallestMultiple = (prop) => {
   }
 };
 
-console.log("first: ", smallestMultiple(20)); // 22 seconds to execute
-console.log("second: ", otherFunction(20)); // 4 seconds to execute
+console.log("first: ", smallestMultiple(20)); // 21s to execute
+console.log("second: ", otherFunction(20)); // 4s to execute
