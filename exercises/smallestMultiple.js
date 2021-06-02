@@ -7,10 +7,10 @@
  */
 
 const smallestMultiple = () => {
-  number = 20;
+  number = 10;
   limit = number;
   results = [];
-  //  divided = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
   while (true) {
     for (let i = 1; i <= limit; i++) {
       if (number % i !== 0) {
