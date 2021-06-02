@@ -39,5 +39,5 @@ const smallestMultiple = () => {
   }
 };
 
-// console.log("first: ", smallestMultiple());
-console.log("second: ", otherFunction());
+console.log("first: ", smallestMultiple());
+console.log("second: ", otherFunction(10));
