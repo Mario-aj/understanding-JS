@@ -11,3 +11,28 @@
 * Find the difference between the sum of the squares of the first one hundred
 * natural numbers and the square of the sum.
  */
+
+const sumSquares = (prop) => {
+  let result = 0;
+  for (let i = 1; i <= prop; i++) {
+    result += i * i;
+  }
+
+  return result;
+};
+
+const squareSum = (prop) => {
+  let result = 0;
+
+  for (let i = 1; i <= prop; i++) {
+    result += i;
+  }
+
+  return result * result;
+};
+
+const sumSquareDifference = (prop) => {
+  return squareSum(prop) - sumSquares(prop);
+};
+
+console.log(sumSquareDifference(100));
