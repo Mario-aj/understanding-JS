@@ -19,13 +19,12 @@ const otherFunction = (prop) => {
   }
 };
 
-const smallestMultiple = () => {
-  let number = 10;
-  let limit = number;
+const smallestMultiple = (prop) => {
+  let number = prop;
   let results = [];
 
   while (true) {
-    for (let i = 1; i <= limit; i++) {
+    for (let i = 1; i <= prop; i++) {
       if (number % i !== 0) {
         results = [];
         break;
@@ -34,10 +33,10 @@ const smallestMultiple = () => {
       results.push(i);
     }
 
-    if (results.length === limit) return number;
+    if (results.length === prop) return number;
     number++;
   }
 };
 
-console.log("first: ", smallestMultiple());
-console.log("second: ", otherFunction(10));
+console.log("first: ", smallestMultiple(20)); // 22 seconds to execute
+console.log("second: ", otherFunction(20)); // 4 seconds to execute
