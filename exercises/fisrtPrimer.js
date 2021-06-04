@@ -13,7 +13,7 @@ const firstPrime = (props) => {
     numbers.push(i);
   }
 
-  numbers.forEach((elem) => {
+  for (let elem = 2; elem <= numbers.length - 1; elem++) {
     let count = 0;
 
     for (let i = 1; i <= elem; i++) {
@@ -26,7 +26,7 @@ const firstPrime = (props) => {
     }
 
     count = 0;
-  });
+  }
 
   return result;
 };
