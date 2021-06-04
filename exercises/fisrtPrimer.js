@@ -25,7 +25,6 @@ const firstPrime = (props) => {
       result.push(elem);
     }
 
-    if (result.length === 6) break;
     count = 0;
   });
 
