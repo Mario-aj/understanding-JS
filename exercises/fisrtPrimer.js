@@ -25,10 +25,11 @@ const firstPrime = (props) => {
       result.push(elem);
     }
 
+    if (result.length === 10001) return result[result.length - 1];
     count = 0;
   }
 
   return result;
 };
 
-console.log(firstPrime(1000));
+console.log(firstPrime(1000000));
