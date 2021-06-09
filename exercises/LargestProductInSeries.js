@@ -27,8 +27,8 @@ Find the thirteen adjacent digits in the 1000-digit number that have the
 greatest product. What is the value of this product?
  */
 
-const findAdjacentNumbers = () => {
-  return;
+const findAdjacentNumbers = (digits) => {
+  return digits;
 };
 
 const digits =
@@ -46,4 +46,4 @@ const digits =
 0156166097919133875499200524063689912560717606058861164671094050775410022569831\
 5520005593572972571636269561882670428252483600823257530420752963450";
 
-console.info(digits);
+console.info(findAdjacentNumbers(digits.split("")));
