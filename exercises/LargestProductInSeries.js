@@ -28,7 +28,25 @@ greatest product. What is the value of this product?
  */
 
 const findAdjacentNumbers = (digits) => {
-  return digits;
+  let max = 0;
+  let control = 1;
+  let acumulator = 1;
+
+  for (let start = 0; start < digits.length; start++, control++) {
+    if (control === 4) {
+      for (let newStart = start - 3; newStart <= start; newStart++) {
+        acumulator *= Number(digits[newStart]);
+      }
+      console.log(acumulator);
+      if (acumulator > max) max = acumulator;
+
+      control = 0;
+      acumulator = 1;
+
+      console.log("========================================");
+    }
+  }
+  return max;
 };
 
 const digits =
