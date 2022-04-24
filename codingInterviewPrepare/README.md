@@ -1,6 +1,6 @@
 # Coding Interview Prep
 
-This section contains hundreds of coding challenges that test your knowledge of algorithms, data structures, and mathematics. It also has a number of take-home projects you can use to strengthen your skills, or add to your portfolio.
+This section contains hundreds of coding challenges that test my knowledge of algorithms, data structures, and mathematics. It also has a number of take-home projects I use to strengthen my skills and add to my portfolio.
 
 ## Contents
 
@@ -10,5 +10,5 @@ This section contains hundreds of coding challenges that test your knowledge of 
 
 ## OBS
 
-- Copyright (c) 2020 [**freeCodeCamp**](https://www.freecodecamp.org/). All rights reserved.
+- [**freeCodeCamp**](https://www.freecodecamp.org/). All rights reserved.
 - You can find the list of all coding challenges at [**coding-interview-prep**](https://www.freecodecamp.org/learn/coding-interview-prep/).
