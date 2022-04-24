@@ -1,52 +1,46 @@
-function removeDuplicatedElement(arr = []) {
-  let r = [];
+function removeDuplicatedElement(target = []) {
+  let result = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    let e = 0;
-    for (let j = i + 1; j <= arr.length; j++) {
-      if (arr[i] === arr[j]) e++;
-    }
+  for (let i = 0; i < target.length; i++) {
+    let hasEqual = 0;
 
-    if (!e) r.push(arr[i]);
+    for (let j = i + 1; j <= target.length; j++)
+      if (target[i] === target[j]) hasEqual++;
+
+    if (!hasEqual) result.push(target[i]);
   }
 
-  return r;
+  return result;
 }
 
-function findSymmetricDifference(target = []) {
-  let value = [];
+function findSymmetricDifference(first = [], second = []) {
+  let target = [...first, ...second];
+  let result = [];
   let position = 0;
 
   target.forEach((item) => {
     let hasEqual = 0;
 
-    for (let i = 0; i < target.length; i++) {
-      if (item === target[i] && position !== i) {
-        hasEqual++;
-      }
-    }
+    for (let i = 0; i < target.length; i++)
+      if (item === target[i] && position !== i) hasEqual++;
 
-    if (hasEqual === 0) value.push(item);
+    if (!hasEqual) result.push(item);
 
     position++;
   });
 
-  return value;
+  return result;
 }
 
 function symmetricDifference(...args) {
-  const twoFirst = [args[0], args[1]];
+  const first = args[0];
   let result = [];
 
-  twoFirst.forEach((arg) => {
-    result.push(...removeDuplicatedElement(arg));
-  });
+  result = removeDuplicatedElement(first);
 
-  result = findSymmetricDifference(result);
-
-  for (let i = 2; i < args.length; i++) {
+  for (let i = 1; i < args.length; i++) {
     let current = removeDuplicatedElement(args[i]);
-    result = findSymmetricDifference([...result, ...current]);
+    result = findSymmetricDifference(result, current);
   }
 
   console.log(result.sort());
