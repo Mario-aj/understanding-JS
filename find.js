@@ -16,27 +16,27 @@ function removeDuplicatedElement(target = []) {
 function findSymmetricDifference(first = [], second = []) {
   let target = [...first, ...second];
   let result = [];
-  let position = 0;
+  let index = 0;
 
   target.forEach((item) => {
     let hasEqual = 0;
 
     for (let i = 0; i < target.length; i++)
-      if (item === target[i] && position !== i) hasEqual++;
+      if (item === target[i] && index !== i) hasEqual++;
 
     if (!hasEqual) result.push(item);
 
-    position++;
+    index++;
   });
 
   return result;
 }
 
 function symmetricDifference(...args) {
-  const first = args[0];
+  const firstArg = args[0];
   let result = [];
 
-  result = removeDuplicatedElement(first);
+  result = removeDuplicatedElement(firstArg);
 
   for (let i = 1; i < args.length; i++) {
     let current = removeDuplicatedElement(args[i]);
