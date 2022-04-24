@@ -1,17 +1,20 @@
-function diffArray(...args) {
-  const [a, b] = args;
+function removeDuplicatedElement(arr = []) {
   let r = [];
 
-  r.push(...compare(a, b));
-  r.push(...compare(b, a));
+  for (let i = 0; i < arr.length; i++) {
+    let e = 0;
+    for (let j = i + 1; j <= arr.length; j++) {
+      if (arr[i] === arr[j]) e++;
+    }
 
-  console.log(r);
+    if (!e) r.push(arr[i]);
+  }
+
+  return r;
 }
 
-function diffArrayV2(...args) {
-  const [a, b] = args;
-  let target = [...a, ...b];
-  let result = [];
+function findSymmetricDifference(target = []) {
+  let value = [];
   let position = 0;
 
   target.forEach((item) => {
@@ -23,63 +26,43 @@ function diffArrayV2(...args) {
       }
     }
 
-    if (hasEqual === 0) result.push(item);
+    if (hasEqual === 0) value.push(item);
 
     position++;
   });
 
-  console.log(result);
+  return value;
 }
 
-function compare(a = [], b = []) {
-  let r = [];
+function symmetricDifference(...args) {
+  const twoFirst = [args[0], args[1]];
+  let result = [];
 
-  a.forEach((i) => {
-    let hasEqual = 0;
-    b.forEach((j) => {
-      if (j === i) hasEqual++;
-    });
-
-    if (hasEqual === 0) r.push(i);
+  twoFirst.forEach((arg) => {
+    result.push(...removeDuplicatedElement(arg));
   });
 
-  return r;
+  result = findSymmetricDifference(result);
+
+  for (let i = 2; i < args.length; i++) {
+    let current = removeDuplicatedElement(args[i]);
+    result = findSymmetricDifference([...result, ...current]);
+  }
+
+  console.log(result.sort());
 }
 
-console.log("********************* V1 *******************");
-diffArray([1, 2, 3], [2, 3, 4]);
-diffArray(
-  ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
-  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+symmetricDifference([1, 2, 3], [5, 2, 1, 4]);
+symmetricDifference([1, 2, 3, 3], [5, 2, 1, 4]);
+symmetricDifference([1, 2, 3], [5, 2, 1, 4, 5]);
+symmetricDifference([1, 2, 5], [2, 3, 5], [3, 4, 5]);
+symmetricDifference([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]);
+symmetricDifference([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]);
+symmetricDifference(
+  [3, 3, 3, 2, 5],
+  [2, 1, 5, 7],
+  [3, 4, 6, 6],
+  [1, 2, 3],
+  [5, 3, 9, 8],
+  [1]
 );
-diffArray(
-  ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
-  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-);
-diffArray(
-  ["andesite", "grass", "dirt", "dead shrub"],
-  ["andesite", "grass", "dirt", "dead shrub"]
-);
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
-diffArray([], ["snuffleupagus", "cookie monster", "elmo"]);
-diffArray([1, "calf", 3, "piglet"], [7, "filly"]);
-
-console.log("********************* V2 *******************");
-diffArrayV2([1, 2, 3], [2, 3, 4]);
-diffArrayV2(
-  ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
-  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-);
-diffArrayV2(
-  ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
-  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-);
-diffArrayV2(
-  ["andesite", "grass", "dirt", "dead shrub"],
-  ["andesite", "grass", "dirt", "dead shrub"]
-);
-diffArrayV2([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-diffArrayV2([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
-diffArrayV2([], ["snuffleupagus", "cookie monster", "elmo"]);
-diffArrayV2([1, "calf", 3, "piglet"], [7, "filly"]);
