@@ -5,16 +5,30 @@ function diffArray(...args) {
   r.push(...compare(a, b));
   r.push(...compare(b, a));
 
-  console.log("v1: ", r);
+  console.log(r);
 }
 
 function diffArrayV2(...args) {
   const [a, b] = args;
-  let r = [];
+  let target = [...a, ...b];
+  let result = [];
+  let position = 0;
 
-  r.push(...compareV2([...a, ...b]));
+  target.forEach((item) => {
+    let hasEqual = 0;
 
-  console.log("v2: ", r);
+    for (let i = 0; i < target.length; i++) {
+      if (item === target[i] && position !== i) {
+        hasEqual++;
+      }
+    }
+
+    if (hasEqual === 0) result.push(item);
+
+    position++;
+  });
+
+  console.log(result);
 }
 
 function compare(a = [], b = []) {
@@ -32,47 +46,40 @@ function compare(a = [], b = []) {
   return r;
 }
 
-function compareV2(a = []) {
-  console.log("vvvvvvvv", a);
-  let r = [];
+console.log("********************* V1 *******************");
+diffArray([1, 2, 3], [2, 3, 4]);
+diffArray(
+  ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
+  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+);
+diffArray(
+  ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
+  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+);
+diffArray(
+  ["andesite", "grass", "dirt", "dead shrub"],
+  ["andesite", "grass", "dirt", "dead shrub"]
+);
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
+diffArray([], ["snuffleupagus", "cookie monster", "elmo"]);
+diffArray([1, "calf", 3, "piglet"], [7, "filly"]);
 
-  console.log(a);
-  return r;
-}
-
-diffArray([1, 2, 3, 1], [2, 3, 4]);
-// diffArray(
-//   ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
-//   ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-// );
-// diffArray(
-//   ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
-//   ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-// );
-// diffArray(
-//   ["andesite", "grass", "dirt", "dead shrub"],
-//   ["andesite", "grass", "dirt", "dead shrub"]
-// );
-// diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-// diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
-// diffArray([], ["snuffleupagus", "cookie monster", "elmo"]);
-// diffArray([1, "calf", 3, "piglet"], [7, "filly"]);
-
-console.log("****************************************");
+console.log("********************* V2 *******************");
 diffArrayV2([1, 2, 3], [2, 3, 4]);
-// diffArrayV2(
-//   ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
-//   ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-// );
-// diffArrayV2(
-//   ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
-//   ["diorite", "andesite", "grass", "dirt", "dead shrub"]
-// );
-// diffArrayV2(
-//   ["andesite", "grass", "dirt", "dead shrub"],
-//   ["andesite", "grass", "dirt", "dead shrub"]
-// );
-// diffArrayV2([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-// diffArrayV2([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
-// diffArrayV2([], ["snuffleupagus", "cookie monster", "elmo"]);
-// diffArrayV2([1, "calf", 3, "piglet"], [7, "filly"]);
+diffArrayV2(
+  ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
+  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+);
+diffArrayV2(
+  ["andesite", "grass", "dirt", "pink wool", "dead shrub"],
+  ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+);
+diffArrayV2(
+  ["andesite", "grass", "dirt", "dead shrub"],
+  ["andesite", "grass", "dirt", "dead shrub"]
+);
+diffArrayV2([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArrayV2([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
+diffArrayV2([], ["snuffleupagus", "cookie monster", "elmo"]);
+diffArrayV2([1, "calf", 3, "piglet"], [7, "filly"]);
