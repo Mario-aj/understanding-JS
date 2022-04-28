@@ -8,6 +8,8 @@ This section contains hundreds of coding challenges that test my knowledge of al
 
 - [find symmetric difference](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/findSymmetricDifference.js)
 
+- [Inventory Update](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/inventoryUpdate.js)
+
 ## OBS
 
 - [**freeCodeCamp**](https://www.freecodecamp.org/). All rights reserved.
