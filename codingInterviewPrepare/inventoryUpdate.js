@@ -29,6 +29,16 @@ function inventoryUpdate(currentInv = [], newInv = []) {
   let filter = newInv.filter((_, index) => !indexes.includes(index));
   result = result.concat(filter);
 
+  for (let i = 0; i < result.length; i++) {
+    for (let j = i + 1; j < result.length; j++) {
+      if (result[i][1] > result[j][1]) {
+        let temp = result[i];
+        result[i] = result[j];
+        result[j] = temp;
+      }
+    }
+  }
+
   console.log(result);
 }
 
