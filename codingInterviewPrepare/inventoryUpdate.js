@@ -6,6 +6,20 @@
  * alphabetical order by item.
  */
 
+function sortByAlphabet(value = []) {
+  for (let i = 0; i < value.length; i++) {
+    for (let j = i + 1; j < value.length; j++) {
+      if (value[i][1] > value[j][1]) {
+        let temp = value[i];
+        value[i] = value[j];
+        value[j] = temp;
+      }
+    }
+  }
+
+  return value;
+}
+
 function inventoryUpdate(currentInv = [], newInv = []) {
   let result = [];
   let indexes = [];
@@ -27,17 +41,7 @@ function inventoryUpdate(currentInv = [], newInv = []) {
   }
 
   let filter = newInv.filter((_, index) => !indexes.includes(index));
-  result = result.concat(filter);
-
-  for (let i = 0; i < result.length; i++) {
-    for (let j = i + 1; j < result.length; j++) {
-      if (result[i][1] > result[j][1]) {
-        let temp = result[i];
-        result[i] = result[j];
-        result[j] = temp;
-      }
-    }
-  }
+  result = sortByAlphabet(result.concat(filter));
 
   console.log(result);
 }
