@@ -6,9 +6,9 @@ This section contains hundreds of coding challenges that test my knowledge of al
 
 ### Algorithms
 
-- [find symmetric difference](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/findSymmetricDifference.js)
+- [find symmetric difference](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/algorithms/findSymmetricDifference.js)
 
-- [Inventory Update](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/inventoryUpdate.js)
+- [Inventory Update](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/algorithms/inventoryUpdate.js)
 
 ## OBS
 
