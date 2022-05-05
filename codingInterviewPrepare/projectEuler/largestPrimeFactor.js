@@ -3,22 +3,36 @@
   What is the largest prime factor of the given number?
  */
 function isPrime(num) {
-  let dividers = 0;
+  let prime = true;
 
-  for (let i = 1; i <= num; i++) {
-    if (num % i === 0) dividers++;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      prime = false;
+      break;
+    }
   }
 
-  return dividers === 2;
+  return prime;
 }
 function largestPrimeFactor(number) {
   let primeFactors = [];
 
-  for (let i = 1; i <= number; i++) {
-    if (number % i === 0 && isPrime(i)) primeFactors.push(i);
+  for (let i = 2; i <= number; i++) {
+    let divide = number / i;
+
+    if (Number.isInteger(divide) && isPrime(i)) {
+      primeFactors.push(i);
+      number = divide;
+    }
   }
 
   console.log(Math.max(...primeFactors));
 }
 
+largestPrimeFactor(2);
+largestPrimeFactor(3);
+largestPrimeFactor(5);
+largestPrimeFactor(7);
+largestPrimeFactor(8);
 largestPrimeFactor(13195);
+largestPrimeFactor(600851475143);
