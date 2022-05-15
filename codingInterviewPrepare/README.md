@@ -13,7 +13,10 @@ This section contains hundreds of coding challenges that test my knowledge of al
 ### Project Euler
 
 - [Multiples of 3 and 5](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/projectEuler/multiplesOf3and5.js)
+
 - [Even Fibonacci Numbers](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/projectEuler/evenFibonacciNumbers.js)
+
+-[Largest prime factor](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/projectEuler/largestPrimeFactor.js)
 
 - [Largest Palindrome Product](https://github.com/Mario-aj/understanding-JS/blob/main/codingInterviewPrepare/projectEuler/largestPalindromeProduct.js)
 
