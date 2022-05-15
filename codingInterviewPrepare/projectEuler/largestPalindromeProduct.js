@@ -1,6 +1,5 @@
 function largestPalindromeProduct(digits) {
-  let lowerLimits = 10;
-  let upperLimits = 99;
+  const [lowerLimits, upperLimits] = getLimites(digits);
   let maxPalindrome = 0;
 
   for (let i = lowerLimits; i <= upperLimits; i++) {
@@ -15,6 +14,18 @@ function largestPalindromeProduct(digits) {
   console.log(maxPalindrome);
 }
 
+function getLimites(digits) {
+  let lowerLimits = "1";
+  let upperLimits = "9";
+
+  for (let i = 1; i < digits; i++) {
+    lowerLimits += "0";
+    upperLimits += "9";
+  }
+
+  return [Number(lowerLimits), Number(upperLimits)];
+}
+
 function isPalindrome(number) {
   let splited = String(number).split("");
   let splitedLength = splited.length - 1;
@@ -27,3 +38,4 @@ function isPalindrome(number) {
 }
 
 largestPalindromeProduct(2);
+largestPalindromeProduct(3);
